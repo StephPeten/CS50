@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Cash Bro
+{% endblock %}
+
+{% block main %}
+    <form action="/addcash" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="monopoly" placeholder="How much money Bro ?" type="number" min=1 scale=1>
+        </div>
+        <button class="btn btn-primary" type="submit">Add Magic Money Bro !</button>
+    </form>
+{% endblock %}

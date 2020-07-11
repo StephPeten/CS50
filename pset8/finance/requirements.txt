@@ -1,0 +1,7 @@
+cs50
+Flask
+Flask-Session
+requests
+
+API CODE BIATCH
+pk_4f8bc35932b54c729dd65be74ddd92a0

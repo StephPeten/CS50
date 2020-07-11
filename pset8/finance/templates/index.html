@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Check Ya Gold Bro
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <tr>
+            <th>Stock</th>
+            <th>Company</th>
+            <th>Shares</th>
+            <th>Value</th>
+            <th>TOTAL</th>
+        </tr>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock[0] }}</td>
+            <td>{{ stock[1] }}</td>
+            <td>{{ stock[2] }}</td>
+            <td>{{ stock[3] }}</td>
+            <td>{{ stock[4] }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>CASH</td>
+            <td>{{ cash }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>TOTAL VALUE</td>
+            <td>{{ total }}</td>
+        </tr>
+    </table>
+
+    <a href="/addcash">Add some more cash Bro !</a>
+{% endblock %}

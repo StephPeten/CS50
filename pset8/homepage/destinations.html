@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>FooTravel</title>
+        <script>
+            function dest()
+            {
+                let name = document.querySelector('#name').value;
+                alert('Thanks for submitting ! We will soon add ' + name + ' to our destinations. Stay tuned !');
+            }
+        </script>
+    </head>
+    <body>
+        <h1><a href="index.html">Welcome on FooTravel !</a></h1>
+
+        <a class="pages" href="tourn.html">Our Partners</a>
+        <a class="pages" href="promotrash.html">Our Offer</a>
+        <a class="pages" href="destinations.html">Another Destination ?</a>
+        <hr>
+
+        <p>What Destination are you looking for ?</p>
+        <form onsubmit="dest(); return false;">
+            <input type="text" id="name">
+            <input type="submit" value="Submit Destination">
+        </form>
+    </body>
+</html>

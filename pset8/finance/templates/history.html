@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Check Ya Transactions Bro
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <tr>
+            <th>Operation</th>
+            <th>Stock</th>
+            <th>Buy/Sell Price</th>
+            <th>Shares</th>
+            <th>Date&Time</th>
+        </tr>
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{transaction.transactions}}</td>
+            <td>{{ transaction.stock }}</td>
+            <td>{{ transaction.price }}</td>
+            <td>{{ transaction.shares }}</td>
+            <td>{{ transaction.time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
