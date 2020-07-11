@@ -1,0 +1,9 @@
+Make sure that the program is running via one command-line argument only
+Make sure that all the characters of the prompted argument are digits
+Convert that command-line argument from a string to an int (forgot about this one :o)
+Prompt the user for plaintext
+Then print the ciphertext after we used the key while remembering that :
+- uppercase need to stay uppercase
+- lowercase need to stay lowercase
+- any other character need to stay the same as in plaintext
+Print a newline
