@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Modify your Percentage !
+{% endblock %}
+
+{% block main %}
+    <form action="/rates" method="post">
+        <label for="rates"><h5>Which destination's commission do you want to modify ?</h5></label>
+
+        <div class="form-group">
+            <select class="form-control" id="rates" name="rates">
+                {% for city, rate in dest.items() %}
+                <option value={{city}}> {{city}} ({{rate}}% hotel/activ.) </option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+
+        <h5>% Commission for Hotel :</h5>
+        <div class="form-group">
+            <input class="form-control" name="hotelcom" placeholder="% Hotel" type="number" min=0 step=1>
+        </div>
+        <br>
+
+        <h5>% Commission for Activities :</h5>
+        <div class="form-group">
+            <input class="form-control" name="activitycom" placeholder="% Activities" type="number" min=0 step=1>
+        </div>
+
+
+        <button class="btn btn-primary" type="submit">Modify !</button>
+    </form>
+
+{% endblock %}

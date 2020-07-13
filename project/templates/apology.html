@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sorry !
+{% endblock %}
+
+{% block main %}
+    <img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://img.buzzfeed.com/buzzfeed-static/static/2015-11/19/12/campaign_images/webdr09/toy-story-funny-moments-2-17115-1447955391-4_dblbig.jpg" title="{{ top }}">
+{% endblock %}

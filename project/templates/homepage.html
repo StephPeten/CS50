@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Hello World !
+{% endblock %}
+
+{% block main %}
+
+<h5>
+    <small class="text-muted">From</small>
+    {{chkin}}
+    <small class="text-muted">to</small>
+    {{chkout}}
+    <small class="text-muted">for</small>
+    {{people}}
+    <small class="text-muted">people.</small>
+</h5>
+<br>
+<h5>Have a look to our destinations and pick the one that will suit you better !</h5>
+<p>If the prices don't change, don't hesitate to refresh the page !</p>
+<br>
+
+{% for row in rows %}
+<div class="card mb-3">
+  <h3 class="card-header">{{row.destinations}}</h3>
+  <div class="card-body">
+    <h5 class="card-title">From {{row.total}}€</h5>
+    <h6 class="card-subtitle text-muted">Hotel and activities for {{people}} people included</h6>
+  </div>
+  <img style="height: 200px; width: 100%; display: block;" src={{row.imagurl}} alt="Card image">
+  <div class="card-body">
+    <a href="/reclame" class="card-link">Book it now !</a>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

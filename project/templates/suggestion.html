@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Suggestion
+{% endblock %}
+
+{% block main %}
+    <h5>What Destination are you looking for ?</h5>
+    <br>
+    <form action="/suggestion" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="suggestion" placeholder="Destination ?" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit Destination !</button>
+    </form>
+{% endblock %}

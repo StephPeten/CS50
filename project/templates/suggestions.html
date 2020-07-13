@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Suggestions
+{% endblock %}
+
+{% block main %}
+    <h5>These are the destinations suggested by our visitors :</h5>
+    <br>
+        <table class="table table-striped">
+        <tr>
+            <th>Destination</th>
+            <th>Demanded</th>
+        </tr>
+        {% for suggestion in suggestions %}
+        <tr>
+            <td>{{ suggestion.destination }}</td>
+            <td>{{ suggestion.demand }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+
+{% endblock %}

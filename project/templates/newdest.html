@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add a new Destination !
+{% endblock %}
+
+{% block main %}
+<h5>Which destination would you like to add ?</h5>
+    <form action="/newdest" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="city" placeholder="What Destination ?" type="text">
+        </div>
+        <br>
+        <h5>Insert the URL of your destination's picture (we recommend choosing a width format like 2000x600):</h5>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="img" placeholder="Picture URL ?" type="text">
+        </div>
+        <br>
+        <h5>What's your hotel's partner code ? (<a href="https://xotelo.com/how-to-get-hotel-key.html">Click HERE to get it !</a>)</h5>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="hotelcode" placeholder="Hotel Code ?" type="text">
+        </div>
+        <br>
+        <h5>How much did you spend for the activities ? (price per person)</h5>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="activities" placeholder="Activities Price ?" type="number" min=0 step=0.01>
+        </div>
+        <button class="btn btn-primary" type="submit">Add it !</button>
+    </form>
+{% endblock %}

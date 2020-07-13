@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome !
+{% endblock %}
+
+{% block main %}
+
+{% if session.user_id %}
+<div class="jumbotron">
+  <h1 class="display-3">Hello, world!</h1>
+  <p class="lead">Welcome to the OTA Management part of the website ! Here you will be able to modify your commissions on the hotel and activities for each destination, to add new destinations or to see which are the destinations that aren't on the website yet but that people would like to visit !</p>
+  <hr class="my-4">
+  <p> Have fun exploring my website ! (and no you can't delete destinations, I keep this privilege to myself *dab*)</p>
+</form>
+</div>
+{% else %}
+<div class="jumbotron">
+  <h1 class="display-3">Hello, world!</h1>
+  <p class="lead">Welcome to my final project ! CS5OTA is an Online Travel Agency that allows you to seek for your next trip with the better price on the market (as a client), and to modify your commission and the prices of each trip with a private account access (as an OTA). All our destinations include the price of the hotel and of activities and the reservations are for 1 room and are up to 4 people.</p>
+  <hr class="my-4">
+  <p>Your just have to fill the information below and click on "Let's Go !" !</p>
+
+  <form action="/" method="post">
+    <label for="start">Start date:</label>
+
+        <input type="date" name="tripst"
+            value="2020-07-13"
+            min="2020-07-13" max="2020-12-31">
+
+    <label for="end">End date:</label>
+
+        <input type="date" name="tripen"
+            value="2020-07-14"
+            min="2020-07-14" max="2020-12-31">
+
+    <label for="people">How Many People ?</label>
+
+        <select class="form-control" name="people">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+
+    <br><br>
+
+    <p class="lead">
+    <button class="btn btn-primary btn-lg" type="submit">Let's Go !</button>
+    </p>
+</form>
+</div>
+{% endif %}
+{% endblock %}
